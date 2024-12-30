@@ -99,7 +99,11 @@ pip install -r requirements.txt
 ```
 将数据集按照类别放置在 `data` 目录下，确保每个类别有相应的子文件夹。
 ```
-
+### 运行训练
+```
+python main.py
+```
+训练过程中，日志将保存在 logs/ 目录，最佳模型参数将保存在 models_saved/ 目录。
 ### 监控训练过程
 
 ```
@@ -107,6 +111,26 @@ visualdl --logdir=./logs --port=8040
 ```
 
 然后在浏览器中访问 http://localhost:8040 查看训练过程中的损失和准确率变化。
+### 执行推理命令
+```
+# 推理单张图像
+python inference.py \
+    --model_path ./models_saved/best_model_fold0.pdparams \
+    --image_path ./test.jpg \
+    --categories Harmful Kitchen Other Recyclable \
+    --use_gpu \
+    --show
+```
+- 参数说明：
+
+--model_path：训练完成的模型权重文件路径。
+--image_path：可以是单张图像的路径，也可以是目录。
+--categories：指定类别列表，需与训练时的类别顺序一致。
+--use_gpu：在有 GPU 环境的情况下使用 GPU 进行推理。
+--show：显示预测图像和推理结果，可选。
+- 批量推理
+
+如果 --image_path 指向一个文件夹，则脚本会对目录下所有符合指定扩展名的图片进行推理，输出预测结果和置信度。
 
 ### 使用本项目您可能需要关注的文件
 
