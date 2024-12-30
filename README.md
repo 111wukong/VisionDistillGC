@@ -76,7 +76,7 @@ VisionDistillGC/
 1. **克隆仓库**
 
 ``` 
-git clone https://github.com/yourusername/VisionDistillGC.git
+https://github.com/111wukong/VisionDistillGC.git
 cd VisionDistillGC
 ```
 
