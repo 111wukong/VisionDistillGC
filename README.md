@@ -99,11 +99,14 @@ pip install -r requirements.txt
 ```
 将数据集按照类别放置在 `data` 目录下，确保每个类别有相应的子文件夹。
 ```
+
 5.**运行训练**
+
 ```
 python main.py
 ```
 训练过程中，日志将保存在 logs/ 目录，最佳模型参数将保存在 models_saved/ 目录。
+
 6.**监控训练过程**
 
 ```
@@ -111,7 +114,9 @@ visualdl --logdir=./logs --port=8040
 ```
 
 然后在浏览器中访问 http://localhost:8040 查看训练过程中的损失和准确率变化。
+
 7.**执行推理命令**
+
 ```
 # 推理单张图像
 python inference.py \
