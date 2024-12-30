@@ -1,0 +1,6 @@
+paddlepaddle==2.5.0
+visualdl==2.6.2
+opencv-python
+numpy
+matplotlib
+scikit-learn
