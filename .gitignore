@@ -60,3 +60,5 @@ static/assets/vendor/
 *.zip
 *.tar.gz
 *.tgz
+# 输出文件
+output/
